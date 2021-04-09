@@ -19,6 +19,30 @@ char toggle_red()		/* always toggle! */
   return 1;			/* always changes an led */
 }
 
+//turn on red turn off green
+void turnOnRed()
+{
+  red_on = 1;
+  green_on = 0;
+  led_update();
+}
+
+//turn on green turn off red 
+void turnOnGreen()
+{
+  green_on = 1;
+  red_on = 0;
+  led_update();
+}
+
+//turn off led and buzzer
+void turnOffAll()
+{
+  buzzer_set_period(0);
+  red_on = 0;
+  green_on = 0;
+  led_update();
+}
 char toggle_green()	/* only toggle green if red is on!  */
 {
   char changed = 0;
@@ -29,7 +53,18 @@ char toggle_green()	/* only toggle green if red is on!  */
   return changed;
 }
 
+void toggle_leds()
+{
+  buzzer_set_period(1000);
+  static char state = 0;
+  switch(state){
+  }
+}
 
+void buzzer_noise(){
+ 
+}
+  
 void state_advance()		/* alternate between toggling red & green */
 {
   char changed = 0;  
