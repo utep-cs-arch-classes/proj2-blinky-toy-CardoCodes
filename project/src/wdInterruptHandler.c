@@ -18,6 +18,7 @@ __interrupt_vec(WDT_VECTOR) WDT(){	/* 250 interrupts/sec */
 
   case 3:
     dimGreen();
+    dimRed();
     break;
 
   case 4:
