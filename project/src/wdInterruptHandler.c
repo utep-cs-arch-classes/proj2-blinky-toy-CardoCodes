@@ -8,7 +8,21 @@ __interrupt_vec(WDT_VECTOR) WDT(){	/* 250 interrupts/sec */
 
   switch(trackState){
   case 1:
+    toggle_leds();
     break;
+    
+  case 2:
+    turnOnRed();
+    buzzerNoise();
+    break;
+
+  case 3:
+    dimGreen();
+    break;
+
+  case 4:
+    turnOffAll();
+    
   default:
     break;
 
