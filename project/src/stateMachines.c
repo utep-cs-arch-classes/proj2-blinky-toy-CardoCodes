@@ -1,6 +1,9 @@
 #include <msp430.h>
 #include "stateMachines.h"
 #include "led.h"
+#include "buzzer.h"
+
+static int count = 0;
 
 char toggle_red()		/* always toggle! */
 {

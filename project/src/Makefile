@@ -32,4 +32,4 @@ stateMachines.o: stateMachines.c stateMachines.h
 
 p2_interrupt_handler.o: p2_interrupt_handler.c
 
-wdInterruptHandler.o: wdInterrupt_Handler.c buzzer.h led.h switches.h stateMachines.h
+wdInterruptHandler.o: wdInterruptHandler.c buzzer.h led.h switches.h stateMachines.h
